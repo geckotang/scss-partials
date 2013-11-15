@@ -1,0 +1,30 @@
+@include describe("[function] parseInt") {
+	@include it("数値化されているか") {
+		@include should( expect( type-of(parseInt(10px)) ), to( equal( number )));
+		@include should( expect( parseInt(10px) ), to( equal( 10 )));
+	}
+}
+
+@include describe("[function] rem") {
+	@include it("remに変換してnumber型が維持されているか") {
+		@include should( expect( type-of(rem(10)) ), to( equal( "number" )));
+		@include should( expect( type-of(rem(10px)) ), to( equal( "number" )));
+		@include should( expect( type-of(rem(1rem)) ), to( equal( "number" )));
+	}
+	@include it("pxからremの変換") {
+		@include should( expect( rem(10) ), to( equal( 1rem )));
+		@include should( expect( rem(16px) ), to( equal( 1.6rem )));
+	}
+	@include it("remからpxの変換") {
+		@include should( expect( rem(1rem) ), to( equal( 10px )));
+		@include should( expect( rem(1.6rem) ), to( equal( 16px )));
+	}
+	@include it("root-font-sizeを変更する") {
+		// 上書きすると影響が出る可能性があるので 、元の値を一時的にキャッシュしておく
+		$_root-font-size: $root-font-size;
+		$root-font-size: 16;
+		@include should( expect( rem(1rem) ), to( equal( 16px )));
+		@include should( expect( rem(16px) ), to( equal( 1rem )));
+		$root-font-size: $_root-font-size;
+	}
+}

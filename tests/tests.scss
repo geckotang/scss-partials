@@ -1,0 +1,8 @@
+@import "../scss/rem";
+@import "bootcamp";
+// falseの場合はPassedの内容は表示しない
+$bootcamp-setting-verbose: false;
+
+@include runner-start;
+@import "specs/rem";
+@include runner-end;
