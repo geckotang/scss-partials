@@ -9,7 +9,7 @@ scss/以下に各scssファイルが存在します。
 $root-font-size: 10 !default; を指定しています。必要に応じて上書きすること。
 
 ```scss
-@import "scss/_rem.scss"
+@import "scss/rem"
 .d1 {
 	@include rem('font-size', 10);
 	@include rem('height', auto);
