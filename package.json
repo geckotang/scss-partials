@@ -5,7 +5,7 @@
   "main": "",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:geckotang/scss-partials.git"
   },
   "author": "@geckotang",
   "readmeFilename": "README.md",
