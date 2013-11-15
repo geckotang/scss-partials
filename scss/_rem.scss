@@ -28,7 +28,8 @@ $root-font-size:10 !default;
 
 // @mixin rem
 // @description 単位なしの数値・もしくはpxならremに変換、remの場合はpxに変換(remに対応してないブラウザ向け)
-// @param $value {Number} 数値
+// @param $property {String} プロパティ名
+// @param $values {Number} 数値（複数可）
 // @usage:
 // .list{
 //   =rem('font-size', 16px); // font-size:1.6rem; font-size: 16px;
@@ -37,8 +38,6 @@ $root-font-size:10 !default;
 @mixin rem($property, $values) {
 	$px : ();
 	$rem: ();
-
-	$root: $root-font-size;
 
 	@each $value in $values {
 		@if $value == 0 or $value == auto {
