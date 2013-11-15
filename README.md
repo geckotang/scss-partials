@@ -44,7 +44,7 @@ $root-font-size: 10 !default; を指定しています。必要に応じて上�
 
 ## テストを実行する
 
-[boodcamp](http://tctcl.github.io/bootcamp)を使ってテストを書いています。
+[boodcamp][1]を使ってテストを書いています。
 
 ```sh
 $ npm install
@@ -57,3 +57,11 @@ Running "bootcamp:test" (bootcamp) task
 
 Done, without errors.
 ```
+
+## LICENSE
+
+SCSSファイルにライセンス条項が明記されていない限りすべて[パブリック・ドメイン][2]として提供されています。
+
+
+[1]: http://tctcl.github.io/bootcamp/
+[2]: http://unlicense.org/
