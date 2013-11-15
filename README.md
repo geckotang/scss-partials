@@ -44,7 +44,7 @@ $root-font-size: 10 !default; を指定しています。必要に応じて上�
 
 ## テストを実行する
 
-[boodcamp][1]を使ってテストを書いています。
+[bootcamp][1]を使ってテストを書いています。
 
 ```sh
 $ npm install
