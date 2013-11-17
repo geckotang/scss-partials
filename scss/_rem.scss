@@ -14,13 +14,13 @@ $root-font-size:10 !default;
 @function rem($value) {
 	$root: $root-font-size;
 	$val: parseInt($value);
-  $unit: unit($value);
+	$unit: unit($value);
 	$result:"";
 
-	@if $unit == "px" or $unit == "" {
+	@if $unit == "px" or unitless($value) {
 		$result: ($val / $root + 0rem);
 	}
-	@if $unit == "rem"{
+	@if $unit == "rem" {
 		$result: ($val * $root + 0px);
 	}
 
@@ -50,7 +50,7 @@ $root-font-size:10 !default;
 			$unit: unit($value);
 			$val: parseInt($value);
 
-			@if unitless($unit) {
+			@if unitless($value) {
 				$unit: "px";
 				$value: $value * 1px;
 			}

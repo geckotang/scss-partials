@@ -28,3 +28,12 @@
 		$root-font-size: $_root-font-size;
 	}
 }
+
+// mixinを書き出しておく
+.test-rem {
+	width: rem(160px);
+	height: rem(16);
+	line-height: rem(1rem);
+	@include rem('font-size', 16px);
+	@include rem('margin', 10 auto);
+}
